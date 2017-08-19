@@ -1,4 +1,4 @@
-\documentclass[10pt, letterpaper, twoside]{memoir}
+\documentclass[10pt, letterpaper, article, twoside]{memoir}
 
 \usepackage[protrusion, expansion,kerning,tracking,spacing]{microtype}
 
@@ -27,37 +27,13 @@
 
 
 % Page style:
-\nouppercaseheads
-\makepagestyle{mystyle}
-\makeevenhead{mystyle}{\excerptname}{Week \thechapter}{\excerptauthor}
-\makeoddhead{mystyle}{\excerptname}{Week \thechapter}{\excerptauthor}
-\makeevenfoot{mystyle}{\thepage}{}{}
-\makeoddfoot{mystyle}{}{}{\thepage}
-
-\makeheadrule{mystyle}{\textwidth}{1pt}
-\makefootrule{mystyle}{\textwidth}{1pt}{0in}
-
-\copypagestyle{chapter}{mystyle}
-\aliaspagestyle{part}{chapter}
-\aliaspagestyle{cleared}{chapter}
-\pagestyle{mystyle}
-
-% Remove headers from chapter front pages.
-\makeevenhead{chapter}{}{}{}
-\makeoddhead{chapter}{}{}{}
-\makeheadrule{chapter}{\textwidth}{0pt}
-\makefootrule{chapter}{\textwidth}{0pt}{0in}
-
-% renew chapter name generation
-\makeatletter
-\renewcommand{\printchaptername}{\chapnamefont Week}
-\makeatother
-
-\renewcommand{\footnoterule}{}
+\pagestyle{plain}
 \begin{document}
 	\title{\emph{To An Unknown God}:\\A Journal of Christian Thought at UC Berkeley\\Fall 2017 DeCal}
 %	\author{Jacquelyn Vasantachat\qquad Simon Kuang}
 	\date{Fall 2017}
 	\maketitle	
 	\clearpage
+	
+	\input{syllabus-body}
 \end{document}
